@@ -1003,7 +1003,7 @@ function App() {
             />
 
             <div className="rounded-2xl p-4 mb-6 flex items-center gap-4" style={{backgroundColor: '#F5F8FA'}}>
-              <div className="flex-shrink-0 w-32">
+              <div className="flex-shrink-0 w-24">
                 <img
                   src="/ecd4dea6a9aeb8932f049b884f734919.jpg"
                   alt="额部分析"
