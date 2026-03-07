@@ -1017,6 +1017,21 @@ function App() {
               </div>
             </div>
 
+            <div className="rounded-2xl p-4 mb-6 flex items-center gap-4" style={{backgroundColor: '#F5F8FA'}}>
+              <div className="flex-shrink-0 w-24">
+                <img
+                  src="/0b9a6dc4116a99bdcba731e6384301b3.jpg"
+                  alt="外轮廓分析"
+                  className="w-full h-auto object-cover rounded-lg"
+                />
+              </div>
+              <div className="flex-1">
+                <p className="text-xs leading-relaxed" style={{color: '#1F2937'}}>
+                  发际线 太阳穴 脸颊下颌骨 下巴的凹凸关系 决定了外轮廓的流畅度
+                </p>
+              </div>
+            </div>
+
             <div className="grid grid-cols-2 gap-4 mb-8">
               {[
                 {
