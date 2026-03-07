@@ -691,6 +691,109 @@ function App() {
         </div>
       </section>
 
+      <section className="py-8 md:py-24 px-6 md:px-12 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-light text-center mb-3 tracking-wide" style={{color: '#1F1F1F'}}>{t('plan.title')}</h2>
+          <p className="text-sm text-center mb-8 md:mb-16 tracking-wide" style={{color: '#6B7280'}}>
+            {t('plan.subtitle')}
+          </p>
+
+          {/* Mobile layout - compact version */}
+          <div className="md:hidden">
+            <div className="flex flex-col gap-6 mb-8">
+              <div className="flex justify-center gap-6">
+                <div className="overflow-hidden relative w-40" style={{backgroundColor: '#F3F4F6'}}>
+                  <img
+                    src="/540f310b1f9b5244da98c950465274f4.png"
+                    alt={t('plan.before')}
+                    className="h-56 w-full object-cover"
+                  />
+                  <div className="absolute bottom-2 left-2 bg-white px-2 py-0.5">
+                    <span className="text-xs text-gray-600">{t('plan.beforeLabel')}</span>
+                  </div>
+                </div>
+                <div className="overflow-hidden relative w-40" style={{backgroundColor: '#F3F4F6'}}>
+                  <img
+                    src="/7f2a85b5a678c2f472ee7c56c64a6039.png"
+                    alt={t('plan.after')}
+                    className="h-56 w-full object-cover"
+                  />
+                  <div className="absolute bottom-2 left-2 bg-white px-2 py-0.5">
+                    <span className="text-xs text-gray-600">{t('plan.afterLabel')}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="max-w-md mx-auto space-y-3">
+                {[
+                  { num: '01', title: t('plan.step1') },
+                  { num: '02', title: t('plan.step2') },
+                  { num: '03', title: t('plan.step3') },
+                  { num: '04', title: t('plan.step4') }
+                ].map((item) => (
+                  <div key={item.num} className="flex items-center gap-3 pb-3 border-b border-gray-200 last:border-0">
+                    <div className="text-base font-light flex-shrink-0" style={{color: '#A0A7B5', width: '36px'}}>{item.num}</div>
+                    <h3 className="text-sm font-normal tracking-wide leading-snug" style={{color: '#1F1F1F'}}>{item.title}</h3>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop layout - new design */}
+          <div className="hidden md:flex md:flex-col md:items-center">
+            {/* Before/After Images Section with Connected Border */}
+            <div className="relative flex gap-32 flex-shrink-0 mb-12">
+              <svg className="absolute inset-0 w-full h-full" style={{ overflow: 'visible' }}>
+                <path
+                  d="M 20,20 L 420,20 L 420,524 L 20,524 L 20,20 M 548,20 L 948,20 L 948,524 L 548,524 L 548,20"
+                  fill="none"
+                  stroke="#D1D5DB"
+                  strokeWidth="2"
+                />
+              </svg>
+              <div className="overflow-hidden relative" style={{width: '400px', backgroundColor: '#F3F4F6'}}>
+                <img
+                  src="/540f310b1f9b5244da98c950465274f4.png"
+                  alt={t('plan.before')}
+                  className="w-full object-cover"
+                  style={{height: '500px'}}
+                />
+                <div className="absolute bottom-4 left-4 bg-white px-3 py-1.5 shadow">
+                  <span className="text-xs font-medium text-gray-700">{t('plan.beforeLabel')}</span>
+                </div>
+              </div>
+              <div className="overflow-hidden relative" style={{width: '400px', backgroundColor: '#F3F4F6'}}>
+                <img
+                  src="/7f2a85b5a678c2f472ee7c56c64a6039.png"
+                  alt={t('plan.after')}
+                  className="w-full object-cover"
+                  style={{height: '500px'}}
+                />
+                <div className="absolute bottom-4 left-4 bg-white px-3 py-1.5 shadow">
+                  <span className="text-xs font-medium text-gray-700">{t('plan.afterLabel')}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Steps Section - Single Row */}
+            <div className="flex gap-16 justify-center">
+              {[
+                { num: '01', title: t('plan.step1') },
+                { num: '02', title: t('plan.step2') },
+                { num: '03', title: t('plan.step3') },
+                { num: '04', title: t('plan.step4') }
+              ].map((item) => (
+                <div key={item.num} className="flex flex-col items-center text-center">
+                  <div className="text-4xl font-extralight mb-4" style={{color: '#D1D5DB'}}>{item.num}</div>
+                  <h3 className="text-base font-normal leading-relaxed" style={{color: '#1F1F1F'}}>{item.title}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-12 md:py-24 px-4 md:px-12 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -839,109 +942,6 @@ function App() {
             <p className="text-center text-sm tracking-wide mt-8" style={{color: '#6B7280'}}>
               {t('ethnicity.cta')}
             </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-8 md:py-24 px-6 md:px-12 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-light text-center mb-3 tracking-wide" style={{color: '#1F1F1F'}}>{t('plan.title')}</h2>
-          <p className="text-sm text-center mb-8 md:mb-16 tracking-wide" style={{color: '#6B7280'}}>
-            {t('plan.subtitle')}
-          </p>
-
-          {/* Mobile layout - compact version */}
-          <div className="md:hidden">
-            <div className="flex flex-col gap-6 mb-8">
-              <div className="flex justify-center gap-6">
-                <div className="overflow-hidden relative w-40" style={{backgroundColor: '#F3F4F6'}}>
-                  <img
-                    src="/540f310b1f9b5244da98c950465274f4.png"
-                    alt={t('plan.before')}
-                    className="h-56 w-full object-cover"
-                  />
-                  <div className="absolute bottom-2 left-2 bg-white px-2 py-0.5">
-                    <span className="text-xs text-gray-600">{t('plan.beforeLabel')}</span>
-                  </div>
-                </div>
-                <div className="overflow-hidden relative w-40" style={{backgroundColor: '#F3F4F6'}}>
-                  <img
-                    src="/7f2a85b5a678c2f472ee7c56c64a6039.png"
-                    alt={t('plan.after')}
-                    className="h-56 w-full object-cover"
-                  />
-                  <div className="absolute bottom-2 left-2 bg-white px-2 py-0.5">
-                    <span className="text-xs text-gray-600">{t('plan.afterLabel')}</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="max-w-md mx-auto space-y-3">
-                {[
-                  { num: '01', title: t('plan.step1') },
-                  { num: '02', title: t('plan.step2') },
-                  { num: '03', title: t('plan.step3') },
-                  { num: '04', title: t('plan.step4') }
-                ].map((item) => (
-                  <div key={item.num} className="flex items-center gap-3 pb-3 border-b border-gray-200 last:border-0">
-                    <div className="text-base font-light flex-shrink-0" style={{color: '#A0A7B5', width: '36px'}}>{item.num}</div>
-                    <h3 className="text-sm font-normal tracking-wide leading-snug" style={{color: '#1F1F1F'}}>{item.title}</h3>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Desktop layout - new design */}
-          <div className="hidden md:flex md:flex-col md:items-center">
-            {/* Before/After Images Section with Connected Border */}
-            <div className="relative flex gap-32 flex-shrink-0 mb-12">
-              <svg className="absolute inset-0 w-full h-full" style={{ overflow: 'visible' }}>
-                <path
-                  d="M 20,20 L 420,20 L 420,524 L 20,524 L 20,20 M 548,20 L 948,20 L 948,524 L 548,524 L 548,20"
-                  fill="none"
-                  stroke="#D1D5DB"
-                  strokeWidth="2"
-                />
-              </svg>
-              <div className="overflow-hidden relative" style={{width: '400px', backgroundColor: '#F3F4F6'}}>
-                <img
-                  src="/540f310b1f9b5244da98c950465274f4.png"
-                  alt={t('plan.before')}
-                  className="w-full object-cover"
-                  style={{height: '500px'}}
-                />
-                <div className="absolute bottom-4 left-4 bg-white px-3 py-1.5 shadow">
-                  <span className="text-xs font-medium text-gray-700">{t('plan.beforeLabel')}</span>
-                </div>
-              </div>
-              <div className="overflow-hidden relative" style={{width: '400px', backgroundColor: '#F3F4F6'}}>
-                <img
-                  src="/7f2a85b5a678c2f472ee7c56c64a6039.png"
-                  alt={t('plan.after')}
-                  className="w-full object-cover"
-                  style={{height: '500px'}}
-                />
-                <div className="absolute bottom-4 left-4 bg-white px-3 py-1.5 shadow">
-                  <span className="text-xs font-medium text-gray-700">{t('plan.afterLabel')}</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Steps Section - Single Row */}
-            <div className="flex gap-16 justify-center">
-              {[
-                { num: '01', title: t('plan.step1') },
-                { num: '02', title: t('plan.step2') },
-                { num: '03', title: t('plan.step3') },
-                { num: '04', title: t('plan.step4') }
-              ].map((item) => (
-                <div key={item.num} className="flex flex-col items-center text-center">
-                  <div className="text-4xl font-extralight mb-4" style={{color: '#D1D5DB'}}>{item.num}</div>
-                  <h3 className="text-base font-normal leading-relaxed" style={{color: '#1F1F1F'}}>{item.title}</h3>
-                </div>
-              ))}
             </div>
           </div>
         </div>
