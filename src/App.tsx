@@ -997,7 +997,7 @@ function App() {
         <div className="md:hidden w-full">
           <div className="px-4">
             <img
-              src="/56315efc544d966bb744e9a52c7de1f4.png"
+              src="/fb607f9eb3218f6c04e8d1dbaa76f126.jpg"
               alt="Professional portrait"
               className="w-full h-auto object-cover rounded-lg mb-6"
             />
