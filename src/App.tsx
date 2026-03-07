@@ -1002,6 +1002,21 @@ function App() {
               className="w-full h-auto object-cover rounded-lg mb-6"
             />
 
+            <div className="rounded-2xl p-4 mb-6 flex items-center gap-4" style={{backgroundColor: '#F5F8FA'}}>
+              <div className="flex-shrink-0 w-32">
+                <img
+                  src="/ecd4dea6a9aeb8932f049b884f734919.jpg"
+                  alt="额部分析"
+                  className="w-full h-auto object-cover rounded-lg"
+                />
+              </div>
+              <div className="flex-1">
+                <p className="text-xs leading-relaxed" style={{color: '#1F2937'}}>
+                  额面分为明区 灰区 暗区  三个转折面 额结节的高低影响 额头的饱满度和立体度
+                </p>
+              </div>
+            </div>
+
             <div className="grid grid-cols-2 gap-4 mb-8">
               {[
                 {
