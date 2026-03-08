@@ -1693,7 +1693,7 @@ function App() {
               </div>
               <div className="col-span-9 col-start-4">
                 <div className="w-full h-[36rem] overflow-hidden">
-                  <img src="/map.png" alt="全球客户分布地图" className="w-full h-full object-cover" />
+                  <img src="/Gemini_Generated_Image_bo54dwbo54dwbo54.png" alt="全球客户分布地图" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
@@ -1702,7 +1702,7 @@ function App() {
           {/* Mobile map - responsive */}
           <div className="md:hidden px-4 mb-8 bg-white">
             <div className="w-full overflow-hidden bg-white">
-              <img src="/map.png" alt="全球客户分布地图" className="w-full h-auto object-contain bg-white" />
+              <img src="/Gemini_Generated_Image_bo54dwbo54dwbo54.png" alt="全球客户分布地图" className="w-full h-auto object-contain bg-white" />
             </div>
           </div>
 
