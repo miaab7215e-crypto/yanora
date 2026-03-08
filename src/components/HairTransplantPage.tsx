@@ -4,6 +4,7 @@ import Footer from './Footer';
 import ImageCompareSlider from './ImageCompareSlider';
 import CTASection from './CTASection';
 import ServiceCasesSection from './ServiceCasesSection';
+import WhyYanoraSection from './WhyYanoraSection';
 import { useState } from 'react';
 
 function HairTransplantPage() {
@@ -609,6 +610,8 @@ function HairTransplantPage() {
       </section>
 
       <ServiceCasesSection serviceType="hair" />
+
+      <WhyYanoraSection />
 
       <CTASection />
 

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import CTASection from './CTASection';
 import Footer from './Footer';
 import Navbar from './Navbar';
+import WhyYanoraSection from './WhyYanoraSection';
 import { supabase } from '../lib/supabase';
 
 interface DetailedCase {
@@ -496,6 +497,8 @@ function BodySculptingPage() {
           </div>
         </div>
       </section>
+
+      <WhyYanoraSection />
 
       <CTASection />
 

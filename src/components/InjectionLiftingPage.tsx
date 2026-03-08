@@ -6,6 +6,7 @@ import CTASection from './CTASection';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import ServiceCasesSection from './ServiceCasesSection';
+import WhyYanoraSection from './WhyYanoraSection';
 
 function InjectionLiftingPage() {
   const navigate = useNavigate();
@@ -384,6 +385,8 @@ function InjectionLiftingPage() {
       </section>
 
       <ServiceCasesSection serviceType="injection" />
+
+      <WhyYanoraSection />
 
       <CTASection />
 

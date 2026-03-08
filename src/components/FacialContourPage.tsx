@@ -6,6 +6,7 @@ import Footer from './Footer';
 import ImageCompareSlider from './ImageCompareSlider';
 import CTASection from './CTASection';
 import ServiceCasesSection from './ServiceCasesSection';
+import WhyYanoraSection from './WhyYanoraSection';
 
 function FacialContourPage() {
   const navigate = useNavigate();
@@ -382,6 +383,8 @@ function FacialContourPage() {
       </section>
 
       <ServiceCasesSection serviceType="facial" />
+
+      <WhyYanoraSection />
 
       <CTASection />
 
