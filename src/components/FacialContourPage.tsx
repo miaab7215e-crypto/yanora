@@ -25,9 +25,8 @@ function FacialContourPage() {
   ];
 
   const lipTypes = [
-    { id: 1, name: 'M唇', description: '性感迷人', image: '🖼️' },
-    { id: 2, name: '微笑唇', description: '亲和友善', image: '🖼️' },
-    { id: 3, name: '饱满丰唇', description: '丰盈立体', image: '🖼️' },
+    { id: 1, image: '/mouth_features/Gemini_Generated_Image_wo4l20wo4l20wo4l_(1).png' },
+    { id: 2, image: '/mouth_features/Gemini_Generated_Image_b6lk02b6lk02b6lk.png' },
   ];
 
   const getCurrentTypes = () => {
@@ -335,7 +334,7 @@ function FacialContourPage() {
           </div>
 
           {/* Feature Types Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className={`grid grid-cols-1 md:grid-cols-2 ${activeFeature === 'lips' ? 'lg:grid-cols-2' : 'lg:grid-cols-3'} gap-8`}>
             {getCurrentTypes().map((type) => (
               <div
                 key={type.id}
@@ -350,11 +349,11 @@ function FacialContourPage() {
                   e.currentTarget.style.boxShadow = 'none';
                 }}
               >
-                {activeFeature === 'eyes' ? (
+                {activeFeature === 'eyes' || activeFeature === 'lips' ? (
                   <div className="w-full aspect-square overflow-hidden">
                     <img
                       src={type.image}
-                      alt="Eye type"
+                      alt={activeFeature === 'eyes' ? 'Eye type' : 'Lip type'}
                       className="w-full h-full object-cover"
                     />
                   </div>
