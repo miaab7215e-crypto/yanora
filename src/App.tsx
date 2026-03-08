@@ -1178,13 +1178,6 @@ function App() {
       {/* Our Advantages Section */}
       <section className="py-12 md:py-24 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
-          <AnimatedSection animation="fade-up">
-            <h2 className="text-2xl md:text-3xl font-light text-center mb-4 tracking-wide" style={{color: '#1F1F1F'}}>
-              {t('advantages.title')}
-            </h2>
-            <div className="w-16 h-px mx-auto mb-12 md:mb-16" style={{backgroundColor: '#B9CBDC'}}></div>
-          </AnimatedSection>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {/* Advantage 1 */}
             <AnimatedSection animation="fade-up" delay={100}>
