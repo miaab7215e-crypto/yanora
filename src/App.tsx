@@ -929,6 +929,21 @@ function App() {
               </div>
             </div>
 
+            <div className="rounded-2xl p-4 mb-6 flex items-center gap-4" style={{backgroundColor: '#F5F8FA'}}>
+              <div className="flex-shrink-0 w-24">
+                <img
+                  src="/e9d22fcf270788298cf5cc46aa47e5e6.jpg"
+                  alt="内轮廓分析"
+                  className="w-full h-auto object-cover rounded-lg"
+                />
+              </div>
+              <div className="flex-1">
+                <p className="text-xs leading-relaxed" style={{color: '#1F2937'}}>
+                  内轮廓的大小、立体度、苹果肌饱满度及平整度共同决定面部精致感与年轻态。
+                </p>
+              </div>
+            </div>
+
             <div className="grid grid-cols-2 gap-4 mb-8">
               {[
                 {
