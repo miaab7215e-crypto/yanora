@@ -1178,13 +1178,13 @@ function App() {
       </section>
 
       {/* Our Advantages Section */}
-      <section className="py-12 md:py-24 px-4 md:px-8 bg-white">
+      <section className="py-8 md:py-12 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="flex justify-center">
             {/* Advantage 1 */}
             <AnimatedSection animation="fade-up" delay={100}>
               <div
-                className="group relative overflow-hidden rounded-3xl transition-all duration-500 hover:shadow-2xl p-8 md:p-10 min-h-[280px] flex flex-col justify-between"
+                className="group relative overflow-hidden rounded-3xl transition-all duration-500 hover:shadow-2xl p-8 md:p-10 min-h-[280px] flex flex-col justify-between max-w-sm w-full"
                 style={{backgroundColor: '#9DB4C8'}}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-8px)';
@@ -1212,10 +1212,10 @@ function App() {
       </section>
 
       {/* Common Concerns Section */}
-      <section className="py-12 md:py-24 px-4 md:px-8" style={{backgroundColor: '#F9FAFB'}}>
+      <section className="py-8 md:py-12 px-4 md:px-8" style={{backgroundColor: '#F9FAFB'}}>
         <div className="max-w-6xl mx-auto">
           <AnimatedSection animation="fade-up">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 md:mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 md:mb-12">
               <div className="overflow-hidden rounded-3xl">
                 <img
                   src="/7f89a2d3257b24a6954e53e9ca86f557.jpg"
