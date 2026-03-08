@@ -1314,6 +1314,23 @@ function App() {
       <section className="py-12 md:py-24 px-4 md:px-8" style={{backgroundColor: '#F9FAFB'}}>
         <div className="max-w-6xl mx-auto">
           <AnimatedSection animation="fade-up">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 md:mb-16">
+              <div className="overflow-hidden rounded-3xl shadow-lg">
+                <img
+                  src="/3faae2f8280b5f279b94bb365051cfeb.jpg"
+                  alt="100,000+ Clients Worldwide"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="overflow-hidden rounded-3xl shadow-lg">
+                <img
+                  src="/ff635f096c695024b835de5da9ea4f0e.jpg"
+                  alt="Personalized Aesthetic Plans"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
             <h2 className="text-2xl md:text-3xl font-light text-center mb-4 tracking-wide" style={{color: '#1F1F1F'}}>
               那些你担心或已经发生的问题
             </h2>
