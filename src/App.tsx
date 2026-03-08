@@ -958,48 +958,48 @@ function App() {
       </section>
 
       <section className="py-12 md:py-24 px-4 md:px-8" style={{backgroundColor: '#F9FAFB'}}>
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <AnimatedSection animation="fade-up">
             <h2 className="text-2xl md:text-3xl font-light text-center mb-3 tracking-wide" style={{color: '#1F1F1F'}}>
               面部折叠度
             </h2>
-            <p className="text-sm md:text-base text-center mb-12 md:mb-16 tracking-wide" style={{color: '#6B7280'}}>
+            <p className="text-sm md:text-base text-center mb-8 md:mb-12 tracking-wide" style={{color: '#6B7280'}}>
               面部折叠度是衡量面部年轻态的关键指标，通过对比可以直观感受岁月在面部留下的痕迹
             </p>
           </AnimatedSection>
 
-          <div className="grid grid-cols-2 gap-4 md:gap-12 max-w-5xl mx-auto">
-            <AnimatedSection animation="fade-left" delay={100} className="space-y-4">
-              <h3 className="text-base md:text-lg font-medium text-center" style={{color: '#1F1F1F'}}>低折叠度</h3>
-              <div className="bg-white rounded-lg overflow-hidden border" style={{borderColor: '#E5E7EB'}}>
+          <div className="grid grid-cols-2 gap-4 md:gap-8">
+            <AnimatedSection animation="fade-left" delay={100} className="space-y-3 md:space-y-4">
+              <h3 className="text-sm md:text-lg font-medium text-center" style={{color: '#1F1F1F'}}>低折叠度</h3>
+              <div className="rounded-2xl overflow-hidden" style={{backgroundColor: '#FFFFFF'}}>
                 <img
                   src="/c902ff4b95da45684c7afeaa83488729.jpg"
                   alt="年轻面部状态"
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <div className="bg-white rounded-lg overflow-hidden border flex items-center justify-center" style={{borderColor: '#E5E7EB'}}>
+              <div className="rounded-2xl overflow-hidden flex items-center justify-center p-4 md:p-6" style={{backgroundColor: '#FFFFFF'}}>
                 <img
                   src="/Gemini_Generated_Image_ig76luig76luig76.png"
                   alt="3D面部图示"
-                  className="w-auto h-24 md:h-48 object-contain"
+                  className="w-auto h-20 md:h-40 object-contain"
                 />
               </div>
             </AnimatedSection>
-            <AnimatedSection animation="fade-right" delay={100} className="space-y-4">
-              <h3 className="text-base md:text-lg font-medium text-center" style={{color: '#1F1F1F'}}>高折叠度</h3>
-              <div className="bg-white rounded-lg overflow-hidden border" style={{borderColor: '#E5E7EB'}}>
+            <AnimatedSection animation="fade-right" delay={100} className="space-y-3 md:space-y-4">
+              <h3 className="text-sm md:text-lg font-medium text-center" style={{color: '#1F1F1F'}}>高折叠度</h3>
+              <div className="rounded-2xl overflow-hidden" style={{backgroundColor: '#FFFFFF'}}>
                 <img
                   src="/6ddd0ec9ec91d3e5b3bc59d068c2a2b5.jpg"
                   alt="成熟面部状态"
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <div className="bg-white rounded-lg overflow-hidden border flex items-center justify-center" style={{borderColor: '#E5E7EB'}}>
+              <div className="rounded-2xl overflow-hidden flex items-center justify-center p-4 md:p-6" style={{backgroundColor: '#FFFFFF'}}>
                 <img
                   src="/Gemini_Generated_Image_x86obtx86obtx86o.png"
                   alt="3D面部图示"
-                  className="w-auto h-24 md:h-48 object-contain"
+                  className="w-auto h-20 md:h-40 object-contain"
                 />
               </div>
             </AnimatedSection>
