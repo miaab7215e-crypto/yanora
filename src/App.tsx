@@ -999,11 +999,11 @@ function App() {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <div className="bg-white rounded-lg overflow-hidden border" style={{borderColor: '#E5E7EB'}}>
+              <div className="bg-white rounded-lg overflow-hidden border flex items-center justify-center" style={{borderColor: '#E5E7EB'}}>
                 <img
                   src="/Gemini_Generated_Image_ig76luig76luig76.png"
                   alt="3D面部图示"
-                  className="w-full h-auto object-cover"
+                  className="w-auto h-full max-h-[250px] object-contain"
                 />
               </div>
             </div>
