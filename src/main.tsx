@@ -20,6 +20,7 @@ import FAQPage from './components/FAQPage.tsx';
 import CasesPage from './components/CasesPage.tsx';
 import PrivacyPolicyPage from './components/PrivacyPolicyPage.tsx';
 import AfterSalesPage from './components/AfterSalesPage.tsx';
+import CardDemo from './components/CardDemo.tsx';
 import ScrollToTop from './components/ScrollToTop.tsx';
 import './index.css';
 
@@ -49,6 +50,7 @@ createRoot(document.getElementById('root')!).render(
             <Route path="/cases" element={<CasesPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/after-sales" element={<AfterSalesPage />} />
+            <Route path="/card-demo" element={<CardDemo />} />
           </Routes>
         </BrowserRouter>
       </LanguageProvider>
