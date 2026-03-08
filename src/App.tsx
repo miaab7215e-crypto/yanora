@@ -1030,27 +1030,27 @@ function App() {
               {/* 术前术后照片对比区 - 横向排列 */}
               <div className="flex justify-center gap-6">
                 {/* 术前照片 */}
-                <div className="overflow-hidden relative w-40" style={{backgroundColor: '#F3F4F6'}}>
+                <div className="overflow-hidden relative w-40 rounded-2xl" style={{backgroundColor: '#F3F4F6'}}>
                   <img
                     src="/540f310b1f9b5244da98c950465274f4.png"
                     alt={t('plan.before')}
                     className="h-56 w-full object-cover"
                   />
                   {/* BEFORE标签 */}
-                  <div className="absolute bottom-2 left-2 bg-white px-2 py-0.5">
+                  <div className="absolute bottom-2 left-2 bg-white px-2 py-0.5 rounded">
                     <span className="text-xs text-gray-600">{t('plan.beforeLabel')}</span>
                   </div>
                 </div>
 
                 {/* 术后照片 */}
-                <div className="overflow-hidden relative w-40" style={{backgroundColor: '#F3F4F6'}}>
+                <div className="overflow-hidden relative w-40 rounded-2xl" style={{backgroundColor: '#F3F4F6'}}>
                   <img
                     src="/7f2a85b5a678c2f472ee7c56c64a6039.png"
                     alt={t('plan.after')}
                     className="h-56 w-full object-cover"
                   />
                   {/* AFTER标签 */}
-                  <div className="absolute bottom-2 left-2 bg-white px-2 py-0.5">
+                  <div className="absolute bottom-2 left-2 bg-white px-2 py-0.5 rounded">
                     <span className="text-xs text-gray-600">{t('plan.afterLabel')}</span>
                   </div>
                 </div>
@@ -1126,7 +1126,7 @@ function App() {
               </svg>
 
               {/* 术前照片容器 */}
-              <div className="overflow-hidden relative" style={{width: '400px', backgroundColor: '#F3F4F6'}}>
+              <div className="overflow-hidden relative rounded-2xl" style={{width: '400px', backgroundColor: '#F3F4F6'}}>
                 <img
                   src="/540f310b1f9b5244da98c950465274f4.png"
                   alt={t('plan.before')}
@@ -1134,13 +1134,13 @@ function App() {
                   style={{height: '500px'}}
                 />
                 {/* BEFORE标签 - 左下角 */}
-                <div className="absolute bottom-4 left-4 bg-white px-3 py-1.5 shadow">
+                <div className="absolute bottom-4 left-4 bg-white px-3 py-1.5 shadow rounded">
                   <span className="text-xs font-medium text-gray-700">{t('plan.beforeLabel')}</span>
                 </div>
               </div>
 
               {/* 术后照片容器 */}
-              <div className="overflow-hidden relative" style={{width: '400px', backgroundColor: '#F3F4F6'}}>
+              <div className="overflow-hidden relative rounded-2xl" style={{width: '400px', backgroundColor: '#F3F4F6'}}>
                 <img
                   src="/7f2a85b5a678c2f472ee7c56c64a6039.png"
                   alt={t('plan.after')}
@@ -1148,7 +1148,7 @@ function App() {
                   style={{height: '500px'}}
                 />
                 {/* AFTER标签 - 左下角 */}
-                <div className="absolute bottom-4 left-4 bg-white px-3 py-1.5 shadow">
+                <div className="absolute bottom-4 left-4 bg-white px-3 py-1.5 shadow rounded">
                   <span className="text-xs font-medium text-gray-700">{t('plan.afterLabel')}</span>
                 </div>
               </div>
