@@ -1005,6 +1005,144 @@ function App() {
         </div>
       </section>
 
+      {/* ========================================
+          手术计划展示区块
+          Section: 获取你的手术计划
+          功能：展示手术前后对比照片及手术步骤流程
+          布局：移动端和桌面端采用不同布局
+      ========================================== */}
+      <section className="py-8 md:py-24 px-6 md:px-12 bg-white">
+        <div className="max-w-6xl mx-auto">
+          {/* 标题和副标题 */}
+          <AnimatedSection animation="fade-up">
+            <h2 className="text-2xl md:text-3xl font-light text-center mb-3 tracking-wide" style={{color: '#1F1F1F'}}>{t('plan.title')}</h2>
+            <p className="text-sm text-center mb-8 md:mb-16 tracking-wide" style={{color: '#6B7280'}}>
+              {t('plan.subtitle')}
+            </p>
+          </AnimatedSection>
+
+          {/* ========================================
+              移动端布局 - 紧凑版设计
+              特点：上下排列，先展示术前术后照片，再展示步骤列表
+          ========================================== */}
+          <div className="md:hidden">
+            <div className="flex flex-col gap-6 mb-8">
+              {/* 术前术后照片对比区 - 横向排列 */}
+              <div className="flex justify-center gap-6">
+                {/* 术前照片 */}
+                <div className="overflow-hidden relative w-40" style={{backgroundColor: '#F3F4F6'}}>
+                  <img
+                    src="/540f310b1f9b5244da98c950465274f4.png"
+                    alt={t('plan.before')}
+                    className="h-56 w-full object-cover"
+                  />
+                  {/* BEFORE标签 */}
+                  <div className="absolute bottom-2 left-2 bg-white px-2 py-0.5">
+                    <span className="text-xs text-gray-600">{t('plan.beforeLabel')}</span>
+                  </div>
+                </div>
+
+                {/* 术后照片 */}
+                <div className="overflow-hidden relative w-40" style={{backgroundColor: '#F3F4F6'}}>
+                  <img
+                    src="/7f2a85b5a678c2f472ee7c56c64a6039.png"
+                    alt={t('plan.after')}
+                    className="h-56 w-full object-cover"
+                  />
+                  {/* AFTER标签 */}
+                  <div className="absolute bottom-2 left-2 bg-white px-2 py-0.5">
+                    <span className="text-xs text-gray-600">{t('plan.afterLabel')}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* 手术步骤列表 - 纵向排列 */}
+              <div className="max-w-md mx-auto space-y-3">
+                {[
+                  { num: '01', title: t('plan.step1') }, // 获取专家面部分析
+                  { num: '02', title: t('plan.step2') }, // 你最美的样子
+                  { num: '03', title: t('plan.step3') }, // 获取你的专属焕颜方案
+                  { num: '04', title: t('plan.step4') }  // 见证显著效果
+                ].map((item) => (
+                  <div key={item.num} className="flex items-center gap-3 pb-3 border-b border-gray-200 last:border-0">
+                    {/* 步骤编号 */}
+                    <div className="text-base font-light flex-shrink-0" style={{color: '#A0A7B5', width: '36px'}}>{item.num}</div>
+                    {/* 步骤标题 */}
+                    <h3 className="text-sm font-normal tracking-wide leading-snug" style={{color: '#1F1F1F'}}>{item.title}</h3>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* ========================================
+              桌面端布局 - 精美设计
+              特点：上下两层布局
+              上层：术前术后照片横向排列，带有装饰性边框
+              下层：4个步骤横向一行排列
+          ========================================== */}
+          <div className="hidden md:flex md:flex-col md:items-center">
+            {/* 术前术后照片区 - 带有SVG装饰边框 */}
+            <div className="relative flex gap-32 flex-shrink-0 mb-12">
+              {/* SVG装饰边框 - 在两张照片周围绘制矩形边框 */}
+              <svg className="absolute inset-0 w-full h-full" style={{ overflow: 'visible' }}>
+                <path
+                  d="M 20,20 L 420,20 L 420,524 L 20,524 L 20,20 M 548,20 L 948,20 L 948,524 L 548,524 L 548,20"
+                  fill="none"
+                  stroke="#D1D5DB"
+                  strokeWidth="2"
+                />
+              </svg>
+
+              {/* 术前照片容器 */}
+              <div className="overflow-hidden relative" style={{width: '400px', backgroundColor: '#F3F4F6'}}>
+                <img
+                  src="/540f310b1f9b5244da98c950465274f4.png"
+                  alt={t('plan.before')}
+                  className="w-full object-cover"
+                  style={{height: '500px'}}
+                />
+                {/* BEFORE标签 - 左下角 */}
+                <div className="absolute bottom-4 left-4 bg-white px-3 py-1.5 shadow">
+                  <span className="text-xs font-medium text-gray-700">{t('plan.beforeLabel')}</span>
+                </div>
+              </div>
+
+              {/* 术后照片容器 */}
+              <div className="overflow-hidden relative" style={{width: '400px', backgroundColor: '#F3F4F6'}}>
+                <img
+                  src="/7f2a85b5a678c2f472ee7c56c64a6039.png"
+                  alt={t('plan.after')}
+                  className="w-full object-cover"
+                  style={{height: '500px'}}
+                />
+                {/* AFTER标签 - 左下角 */}
+                <div className="absolute bottom-4 left-4 bg-white px-3 py-1.5 shadow">
+                  <span className="text-xs font-medium text-gray-700">{t('plan.afterLabel')}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* 手术步骤区 - 单行横向排列 */}
+            <div className="flex gap-16 justify-center">
+              {[
+                { num: '01', title: t('plan.step1') }, // 获取专家面部分析
+                { num: '02', title: t('plan.step2') }, // 你最美的样子
+                { num: '03', title: t('plan.step3') }, // 获取你的专属焕颜方案
+                { num: '04', title: t('plan.step4') }  // 见证显著效果
+              ].map((item) => (
+                <div key={item.num} className="flex flex-col items-center text-center">
+                  {/* 步骤编号 - 大号灰色数字 */}
+                  <div className="text-4xl font-extralight mb-4" style={{color: '#D1D5DB'}}>{item.num}</div>
+                  {/* 步骤标题 */}
+                  <h3 className="text-base font-normal leading-relaxed" style={{color: '#1F1F1F'}}>{item.title}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Common Concerns Section */}
       <section className="py-12 md:py-24 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -1217,144 +1355,6 @@ function App() {
               />
             </div>
           </AnimatedSection>
-        </div>
-      </section>
-
-      {/* ========================================
-          手术计划展示区块
-          Section: 获取你的手术计划
-          功能：展示手术前后对比照片及手术步骤流程
-          布局：移动端和桌面端采用不同布局
-      ========================================== */}
-      <section className="py-8 md:py-24 px-6 md:px-12 bg-white">
-        <div className="max-w-6xl mx-auto">
-          {/* 标题和副标题 */}
-          <AnimatedSection animation="fade-up">
-            <h2 className="text-2xl md:text-3xl font-light text-center mb-3 tracking-wide" style={{color: '#1F1F1F'}}>{t('plan.title')}</h2>
-            <p className="text-sm text-center mb-8 md:mb-16 tracking-wide" style={{color: '#6B7280'}}>
-              {t('plan.subtitle')}
-            </p>
-          </AnimatedSection>
-
-          {/* ========================================
-              移动端布局 - 紧凑版设计
-              特点：上下排列，先展示术前术后照片，再展示步骤列表
-          ========================================== */}
-          <div className="md:hidden">
-            <div className="flex flex-col gap-6 mb-8">
-              {/* 术前术后照片对比区 - 横向排列 */}
-              <div className="flex justify-center gap-6">
-                {/* 术前照片 */}
-                <div className="overflow-hidden relative w-40" style={{backgroundColor: '#F3F4F6'}}>
-                  <img
-                    src="/540f310b1f9b5244da98c950465274f4.png"
-                    alt={t('plan.before')}
-                    className="h-56 w-full object-cover"
-                  />
-                  {/* BEFORE标签 */}
-                  <div className="absolute bottom-2 left-2 bg-white px-2 py-0.5">
-                    <span className="text-xs text-gray-600">{t('plan.beforeLabel')}</span>
-                  </div>
-                </div>
-
-                {/* 术后照片 */}
-                <div className="overflow-hidden relative w-40" style={{backgroundColor: '#F3F4F6'}}>
-                  <img
-                    src="/7f2a85b5a678c2f472ee7c56c64a6039.png"
-                    alt={t('plan.after')}
-                    className="h-56 w-full object-cover"
-                  />
-                  {/* AFTER标签 */}
-                  <div className="absolute bottom-2 left-2 bg-white px-2 py-0.5">
-                    <span className="text-xs text-gray-600">{t('plan.afterLabel')}</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* 手术步骤列表 - 纵向排列 */}
-              <div className="max-w-md mx-auto space-y-3">
-                {[
-                  { num: '01', title: t('plan.step1') }, // 获取专家面部分析
-                  { num: '02', title: t('plan.step2') }, // 你最美的样子
-                  { num: '03', title: t('plan.step3') }, // 获取你的专属焕颜方案
-                  { num: '04', title: t('plan.step4') }  // 见证显著效果
-                ].map((item) => (
-                  <div key={item.num} className="flex items-center gap-3 pb-3 border-b border-gray-200 last:border-0">
-                    {/* 步骤编号 */}
-                    <div className="text-base font-light flex-shrink-0" style={{color: '#A0A7B5', width: '36px'}}>{item.num}</div>
-                    {/* 步骤标题 */}
-                    <h3 className="text-sm font-normal tracking-wide leading-snug" style={{color: '#1F1F1F'}}>{item.title}</h3>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* ========================================
-              桌面端布局 - 精美设计
-              特点：上下两层布局
-              上层：术前术后照片横向排列，带有装饰性边框
-              下层：4个步骤横向一行排列
-          ========================================== */}
-          <div className="hidden md:flex md:flex-col md:items-center">
-            {/* 术前术后照片区 - 带有SVG装饰边框 */}
-            <div className="relative flex gap-32 flex-shrink-0 mb-12">
-              {/* SVG装饰边框 - 在两张照片周围绘制矩形边框 */}
-              <svg className="absolute inset-0 w-full h-full" style={{ overflow: 'visible' }}>
-                <path
-                  d="M 20,20 L 420,20 L 420,524 L 20,524 L 20,20 M 548,20 L 948,20 L 948,524 L 548,524 L 548,20"
-                  fill="none"
-                  stroke="#D1D5DB"
-                  strokeWidth="2"
-                />
-              </svg>
-
-              {/* 术前照片容器 */}
-              <div className="overflow-hidden relative" style={{width: '400px', backgroundColor: '#F3F4F6'}}>
-                <img
-                  src="/540f310b1f9b5244da98c950465274f4.png"
-                  alt={t('plan.before')}
-                  className="w-full object-cover"
-                  style={{height: '500px'}}
-                />
-                {/* BEFORE标签 - 左下角 */}
-                <div className="absolute bottom-4 left-4 bg-white px-3 py-1.5 shadow">
-                  <span className="text-xs font-medium text-gray-700">{t('plan.beforeLabel')}</span>
-                </div>
-              </div>
-
-              {/* 术后照片容器 */}
-              <div className="overflow-hidden relative" style={{width: '400px', backgroundColor: '#F3F4F6'}}>
-                <img
-                  src="/7f2a85b5a678c2f472ee7c56c64a6039.png"
-                  alt={t('plan.after')}
-                  className="w-full object-cover"
-                  style={{height: '500px'}}
-                />
-                {/* AFTER标签 - 左下角 */}
-                <div className="absolute bottom-4 left-4 bg-white px-3 py-1.5 shadow">
-                  <span className="text-xs font-medium text-gray-700">{t('plan.afterLabel')}</span>
-                </div>
-              </div>
-            </div>
-
-            {/* 手术步骤区 - 单行横向排列 */}
-            <div className="flex gap-16 justify-center">
-              {[
-                { num: '01', title: t('plan.step1') }, // 获取专家面部分析
-                { num: '02', title: t('plan.step2') }, // 你最美的样子
-                { num: '03', title: t('plan.step3') }, // 获取你的专属焕颜方案
-                { num: '04', title: t('plan.step4') }  // 见证显著效果
-              ].map((item) => (
-                <div key={item.num} className="flex flex-col items-center text-center">
-                  {/* 步骤编号 - 大号灰色数字 */}
-                  <div className="text-4xl font-extralight mb-4" style={{color: '#D1D5DB'}}>{item.num}</div>
-                  {/* 步骤标题 */}
-                  <h3 className="text-base font-normal leading-relaxed" style={{color: '#1F1F1F'}}>{item.title}</h3>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
