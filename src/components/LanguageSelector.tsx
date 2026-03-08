@@ -12,24 +12,16 @@ const LanguageSelector = ({ isMobile = false, isBottomSection = false }: Languag
   const [showMenu, setShowMenu] = useState(false);
 
   const languages = [
-    { code: 'zh' as const, name: '中文', flag: '🇨🇳' },
     { code: 'en' as const, name: 'English', flag: '🇺🇸' },
-    { code: 'fr' as const, name: 'Français', flag: '🇫🇷' },
-    { code: 'ar' as const, name: 'العربية', flag: '🇸🇦' },
-    { code: 'es' as const, name: 'Español', flag: '🇪🇸' },
+    { code: 'zh' as const, name: '中文', flag: '🇨🇳' },
   ];
 
   const currentLanguage = languages.find(lang => lang.code === language);
 
-  const handleLanguageChange = (langCode: 'zh' | 'en' | 'fr' | 'ar' | 'es') => {
+  const handleLanguageChange = (langCode: 'zh' | 'en') => {
     setLanguage(langCode);
     setShowMenu(false);
-
-    if (langCode === 'ar') {
-      document.documentElement.dir = 'rtl';
-    } else {
-      document.documentElement.dir = 'ltr';
-    }
+    document.documentElement.dir = 'ltr';
   };
 
   if (isMobile) {
