@@ -1315,14 +1315,14 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <AnimatedSection animation="fade-up">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 md:mb-16">
-              <div className="overflow-hidden rounded-3xl shadow-lg">
+              <div className="overflow-hidden rounded-3xl">
                 <img
                   src="/7f89a2d3257b24a6954e53e9ca86f557.jpg"
                   alt="10W+ Clients Worldwide"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="overflow-hidden rounded-3xl shadow-lg">
+              <div className="overflow-hidden rounded-3xl">
                 <img
                   src="/babdd4249dea4d87530ef110e24bd12b.jpg"
                   alt="Personalized Aesthetic Plans"
