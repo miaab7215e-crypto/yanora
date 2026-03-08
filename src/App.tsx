@@ -958,7 +958,7 @@ function App() {
       </section>
 
       <section className="py-12 md:py-24 px-4 md:px-8" style={{backgroundColor: '#F9FAFB'}}>
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto rounded-3xl p-6 md:p-8" style={{backgroundColor: '#FFFFFF'}}>
           <AnimatedSection animation="fade-up">
             <h2 className="text-2xl md:text-3xl font-light text-center mb-3 tracking-wide" style={{color: '#1F1F1F'}}>
               面部折叠度
@@ -971,14 +971,14 @@ function App() {
           <div className="grid grid-cols-2 gap-4 md:gap-8">
             <AnimatedSection animation="fade-left" delay={100} className="space-y-3 md:space-y-4">
               <h3 className="text-sm md:text-lg font-medium text-center" style={{color: '#1F1F1F'}}>低折叠度</h3>
-              <div className="rounded-2xl overflow-hidden" style={{backgroundColor: '#FFFFFF'}}>
+              <div className="rounded-2xl overflow-hidden" style={{backgroundColor: '#F5F8FA'}}>
                 <img
                   src="/c902ff4b95da45684c7afeaa83488729.jpg"
                   alt="年轻面部状态"
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <div className="rounded-2xl overflow-hidden flex items-center justify-center p-4 md:p-6" style={{backgroundColor: '#FFFFFF'}}>
+              <div className="rounded-2xl overflow-hidden flex items-center justify-center p-4 md:p-6" style={{backgroundColor: '#F5F8FA'}}>
                 <img
                   src="/Gemini_Generated_Image_ig76luig76luig76.png"
                   alt="3D面部图示"
@@ -988,14 +988,14 @@ function App() {
             </AnimatedSection>
             <AnimatedSection animation="fade-right" delay={100} className="space-y-3 md:space-y-4">
               <h3 className="text-sm md:text-lg font-medium text-center" style={{color: '#1F1F1F'}}>高折叠度</h3>
-              <div className="rounded-2xl overflow-hidden" style={{backgroundColor: '#FFFFFF'}}>
+              <div className="rounded-2xl overflow-hidden" style={{backgroundColor: '#F5F8FA'}}>
                 <img
                   src="/6ddd0ec9ec91d3e5b3bc59d068c2a2b5.jpg"
                   alt="成熟面部状态"
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <div className="rounded-2xl overflow-hidden flex items-center justify-center p-4 md:p-6" style={{backgroundColor: '#FFFFFF'}}>
+              <div className="rounded-2xl overflow-hidden flex items-center justify-center p-4 md:p-6" style={{backgroundColor: '#F5F8FA'}}>
                 <img
                   src="/Gemini_Generated_Image_x86obtx86obtx86o.png"
                   alt="3D面部图示"
