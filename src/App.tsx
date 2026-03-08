@@ -1157,8 +1157,8 @@ function App() {
             {/* Issue 1 */}
             <AnimatedSection animation="fade-up" delay={100}>
               <div
-                className="group relative overflow-hidden bg-white border-2 transition-all duration-500 hover:shadow-2xl"
-                style={{borderColor: '#E5E7EB'}}
+                className="group relative overflow-hidden border-2 transition-all duration-500 hover:shadow-2xl"
+                style={{borderColor: '#E5E7EB', backgroundColor: '#F5F8FA'}}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = '#B9CBDC';
                   e.currentTarget.style.transform = 'translateY(-4px)';
@@ -1196,8 +1196,8 @@ function App() {
             {/* Issue 2 */}
             <AnimatedSection animation="fade-up" delay={200}>
               <div
-                className="group relative overflow-hidden bg-white border-2 transition-all duration-500 hover:shadow-2xl"
-                style={{borderColor: '#E5E7EB'}}
+                className="group relative overflow-hidden border-2 transition-all duration-500 hover:shadow-2xl"
+                style={{borderColor: '#E5E7EB', backgroundColor: '#F5F8FA'}}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = '#B9CBDC';
                   e.currentTarget.style.transform = 'translateY(-4px)';
@@ -1235,8 +1235,8 @@ function App() {
             {/* Issue 3 */}
             <AnimatedSection animation="fade-up" delay={300}>
               <div
-                className="group relative overflow-hidden bg-white border-2 transition-all duration-500 hover:shadow-2xl"
-                style={{borderColor: '#E5E7EB'}}
+                className="group relative overflow-hidden border-2 transition-all duration-500 hover:shadow-2xl"
+                style={{borderColor: '#E5E7EB', backgroundColor: '#F5F8FA'}}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = '#B9CBDC';
                   e.currentTarget.style.transform = 'translateY(-4px)';
@@ -1274,8 +1274,8 @@ function App() {
             {/* Issue 4 */}
             <AnimatedSection animation="fade-up" delay={400}>
               <div
-                className="group relative overflow-hidden bg-white border-2 transition-all duration-500 hover:shadow-2xl"
-                style={{borderColor: '#E5E7EB'}}
+                className="group relative overflow-hidden border-2 transition-all duration-500 hover:shadow-2xl"
+                style={{borderColor: '#E5E7EB', backgroundColor: '#F5F8FA'}}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = '#B9CBDC';
                   e.currentTarget.style.transform = 'translateY(-4px)';
