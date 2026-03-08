@@ -1036,6 +1036,200 @@ function App() {
         </div>
       </section>
 
+      {/* Common Concerns Section */}
+      <section className="py-12 md:py-24 px-4 md:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection animation="fade-up">
+            <h2 className="text-2xl md:text-3xl font-light text-center mb-4 tracking-wide" style={{color: '#1F1F1F'}}>
+              那些你担心或已经发生的问题
+            </h2>
+            <div className="w-16 h-px mx-auto mb-12 md:mb-16" style={{backgroundColor: '#B9CBDC'}}></div>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {/* Issue 1 */}
+            <AnimatedSection animation="fade-up" delay={100}>
+              <div
+                className="group relative overflow-hidden bg-white border-2 transition-all duration-500 hover:shadow-2xl"
+                style={{borderColor: '#E5E7EB'}}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = '#B9CBDC';
+                  e.currentTarget.style.transform = 'translateY(-4px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = '#E5E7EB';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                <div className="p-6 md:p-8">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div
+                      className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white font-light transition-all duration-300 group-hover:scale-110"
+                      style={{backgroundColor: '#1C2B3A'}}
+                    >
+                      01
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg md:text-xl font-normal mb-3 tracking-wide" style={{color: '#1F1F1F'}}>
+                        比例与量感失控
+                      </h3>
+                      <p className="text-sm leading-relaxed" style={{color: '#6B7280'}}>
+                        过度填充导致不符合生理基础的夸张形态，或对骨性结构不足的区域单纯做软组织增量，导致臃肿假面。
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="absolute bottom-0 left-0 h-1 transition-all duration-500 w-0 group-hover:w-full"
+                    style={{backgroundColor: '#B9CBDC'}}
+                  ></div>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            {/* Issue 2 */}
+            <AnimatedSection animation="fade-up" delay={200}>
+              <div
+                className="group relative overflow-hidden bg-white border-2 transition-all duration-500 hover:shadow-2xl"
+                style={{borderColor: '#E5E7EB'}}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = '#B9CBDC';
+                  e.currentTarget.style.transform = 'translateY(-4px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = '#E5E7EB';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                <div className="p-6 md:p-8">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div
+                      className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white font-light transition-all duration-300 group-hover:scale-110"
+                      style={{backgroundColor: '#1C2B3A'}}
+                    >
+                      02
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg md:text-xl font-normal mb-3 tracking-wide" style={{color: '#1F1F1F'}}>
+                        移位与下垂
+                      </h3>
+                      <p className="text-sm leading-relaxed" style={{color: '#6B7280'}}>
+                        为追求即时效果忽略组织承重，或材料选择/层次植入错误，后期因重力发生移位、下垂。
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="absolute bottom-0 left-0 h-1 transition-all duration-500 w-0 group-hover:w-full"
+                    style={{backgroundColor: '#B9CBDC'}}
+                  ></div>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            {/* Issue 3 */}
+            <AnimatedSection animation="fade-up" delay={300}>
+              <div
+                className="group relative overflow-hidden bg-white border-2 transition-all duration-500 hover:shadow-2xl"
+                style={{borderColor: '#E5E7EB'}}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = '#B9CBDC';
+                  e.currentTarget.style.transform = 'translateY(-4px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = '#E5E7EB';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                <div className="p-6 md:p-8">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div
+                      className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white font-light transition-all duration-300 group-hover:scale-110"
+                      style={{backgroundColor: '#1C2B3A'}}
+                    >
+                      03
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg md:text-xl font-normal mb-3 tracking-wide" style={{color: '#1F1F1F'}}>
+                        工业化流水线审美
+                      </h3>
+                      <p className="text-sm leading-relaxed" style={{color: '#6B7280'}}>
+                        部分医生倾向于用固定的术式套用在不同人脸上，忽略个人特色与整体协调性，导致"美得千篇一律"。
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="absolute bottom-0 left-0 h-1 transition-all duration-500 w-0 group-hover:w-full"
+                    style={{backgroundColor: '#B9CBDC'}}
+                  ></div>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            {/* Issue 4 */}
+            <AnimatedSection animation="fade-up" delay={400}>
+              <div
+                className="group relative overflow-hidden bg-white border-2 transition-all duration-500 hover:shadow-2xl"
+                style={{borderColor: '#E5E7EB'}}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = '#B9CBDC';
+                  e.currentTarget.style.transform = 'translateY(-4px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = '#E5E7EB';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                <div className="p-6 md:p-8">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div
+                      className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white font-light transition-all duration-300 group-hover:scale-110"
+                      style={{backgroundColor: '#1C2B3A'}}
+                    >
+                      04
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg md:text-xl font-normal mb-3 tracking-wide" style={{color: '#1F1F1F'}}>
+                        缺乏整体设计思维
+                      </h3>
+                      <p className="text-sm leading-relaxed" style={{color: '#6B7280'}}>
+                        只关注单一部位，比如只把眼睛放大，却忽略了眼睛与眉弓、颧骨、鼻梁的过渡关系，导致术后局部好看，整体别扭。
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="absolute bottom-0 left-0 h-1 transition-all duration-500 w-0 group-hover:w-full"
+                    style={{backgroundColor: '#B9CBDC'}}
+                  ></div>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+
+          {/* Bottom CTA */}
+          <AnimatedSection animation="fade-up" delay={500}>
+            <div className="mt-12 md:mt-16 text-center">
+              <p className="text-sm md:text-base mb-6 tracking-wide" style={{color: '#6B7280'}}>
+                避免这些问题，从选择正确的医生和方案开始
+              </p>
+              <button
+                onClick={() => navigate('/booking')}
+                className="px-8 md:px-12 py-3 text-white text-sm transition tracking-wider hover:shadow-lg"
+                style={{backgroundColor: '#1C2B3A'}}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#101D29';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#1C2B3A';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                预约专业咨询
+              </button>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       <section className="py-12 md:py-24 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection animation="fade-up">
