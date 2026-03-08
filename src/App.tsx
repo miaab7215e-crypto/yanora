@@ -1057,9 +1057,7 @@ function App() {
               </div>
 
               {/* 手术步骤列表 - 纵向排列 */}
-              <div className="max-w-md mx-auto rounded-3xl p-6" style={{
-                backgroundColor: '#FFFFFF'
-              }}>
+              <div className="max-w-md mx-auto space-y-3">
                 {[
                   { num: '01', title: t('plan.step1') }, // 获取专家面部分析
                   { num: '02', title: t('plan.step2') }, // 你最美的样子
@@ -1067,23 +1065,26 @@ function App() {
                   { num: '04', title: t('plan.step4') }  // 见证显著效果
                 ].map((item, index, array) => (
                   <div key={item.num}>
-                    {/* 步骤卡片 - 长条边框 */}
+                    {/* 步骤卡片 */}
                     <div
-                      className="rounded-2xl px-6 py-3"
+                      className="rounded-2xl p-4"
                       style={{
-                        border: '1px solid #E5E7EB'
+                        backgroundColor: '#F5F8FA'
                       }}
                     >
-                      {/* 步骤编号 */}
-                      <div className="text-center mb-1">
-                        <span className="text-base font-light tracking-wider" style={{color: '#A0A7B5'}}>
-                          {item.num} /
-                        </span>
+                      <div className="flex items-start gap-3">
+                        <div
+                          className="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-light"
+                          style={{backgroundColor: '#1C2B3A'}}
+                        >
+                          {item.num}
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-base font-normal leading-snug" style={{color: '#1F1F1F'}}>
+                            {item.title}
+                          </h3>
+                        </div>
                       </div>
-                      {/* 步骤标题 */}
-                      <h3 className="text-base font-normal text-center leading-snug" style={{color: '#1F1F1F'}}>
-                        {item.title}
-                      </h3>
                     </div>
 
                     {/* 箭头分隔符 - 不在最后一个步骤显示 */}
