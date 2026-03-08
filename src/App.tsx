@@ -990,15 +990,15 @@ function App() {
             面部折叠度是衡量面部年轻态的关键指标，通过对比可以直观感受岁月在面部留下的痕迹
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
-            <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+          <div className="grid grid-cols-2 gap-4 md:gap-12 max-w-5xl mx-auto">
+            <div className="bg-white rounded-lg overflow-hidden border" style={{borderColor: '#E5E7EB'}}>
               <img
                 src="/c902ff4b95da45684c7afeaa83488729.jpg"
                 alt="年轻面部状态"
                 className="w-full h-auto object-cover"
               />
             </div>
-            <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+            <div className="bg-white rounded-lg overflow-hidden border" style={{borderColor: '#E5E7EB'}}>
               <img
                 src="/6ddd0ec9ec91d3e5b3bc59d068c2a2b5.jpg"
                 alt="成熟面部状态"
