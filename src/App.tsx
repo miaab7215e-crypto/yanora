@@ -1334,29 +1334,6 @@ function App() {
             </AnimatedSection>
           </div>
 
-          {/* Bottom CTA */}
-          <AnimatedSection animation="fade-up" delay={500}>
-            <div className="mt-12 md:mt-16 text-center">
-              <p className="text-sm md:text-base mb-6 tracking-wide" style={{color: '#6B7280'}}>
-                避免这些问题，从选择正确的医生和方案开始
-              </p>
-              <button
-                onClick={() => navigate('/booking')}
-                className="px-8 md:px-12 py-3 text-white text-sm transition tracking-wider hover:shadow-lg"
-                style={{backgroundColor: '#1C2B3A'}}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#101D29';
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = '#1C2B3A';
-                  e.currentTarget.style.transform = 'translateY(0)';
-                }}
-              >
-                预约专业咨询
-              </button>
-            </div>
-          </AnimatedSection>
         </div>
       </section>
 
