@@ -185,7 +185,8 @@ function App() {
                         >
                           <span className="text-lg font-light tracking-wider">{t('nav.hairTransplant')}</span>
                         </button>
-                        <button
+                        {/* Temporarily hidden - Dental page */}
+                        {/* <button
                           onClick={() => navigate('/dental')}
                           className="text-left px-8 py-5 transition-all duration-300 border border-white border-opacity-20"
                           style={{color: 'white', backgroundColor: 'transparent'}}
@@ -199,7 +200,7 @@ function App() {
                           }}
                         >
                           <span className="text-lg font-light tracking-wider">{t('nav.dental')}</span>
-                        </button>
+                        </button> */}
                       </div>
 
                       <div className="absolute bottom-8 right-16">
@@ -359,7 +360,8 @@ function App() {
                   >
                     {t('nav.hairTransplant')}
                   </button>
-                  <button
+                  {/* Temporarily hidden - Dental page */}
+                  {/* <button
                     onClick={() => {
                       navigate('/dental');
                       setShowMobileMenu(false);
@@ -369,7 +371,7 @@ function App() {
                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
                   >
                     {t('nav.dental')}
-                  </button>
+                  </button> */}
                 </div>
               )}
             </div>

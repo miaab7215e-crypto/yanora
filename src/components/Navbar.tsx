@@ -126,7 +126,8 @@ function Navbar() {
                         >
                           <span className="text-lg font-light tracking-wider">植发</span>
                         </button>
-                        <button
+                        {/* Temporarily hidden - Dental page */}
+                        {/* <button
                           onClick={() => {
                             navigate('/dental');
                             setShowProjectsMenu(false);
@@ -143,7 +144,7 @@ function Navbar() {
                           }}
                         >
                           <span className="text-lg font-light tracking-wider">牙齿美容</span>
-                        </button>
+                        </button> */}
                       </div>
 
                       <div className="absolute bottom-8 right-16">
@@ -303,7 +304,8 @@ function Navbar() {
                   >
                     植发
                   </button>
-                  <button
+                  {/* Temporarily hidden - Dental page */}
+                  {/* <button
                     onClick={() => {
                       navigate('/dental');
                       setShowMobileMenu(false);
@@ -313,7 +315,7 @@ function Navbar() {
                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
                   >
                     牙齿美容
-                  </button>
+                  </button> */}
                 </div>
               )}
             </div>
