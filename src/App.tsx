@@ -999,11 +999,11 @@ function App() {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <div className="bg-white rounded-lg overflow-hidden border flex items-center justify-center" style={{borderColor: '#E5E7EB'}}>
+              <div className="bg-white rounded-lg overflow-hidden border flex items-center justify-center" style={{borderColor: '#E5E7EB', height: '150px'}}>
                 <img
                   src="/Gemini_Generated_Image_ig76luig76luig76.png"
                   alt="3D面部图示"
-                  className="w-auto h-full max-h-[250px] object-contain"
+                  className="w-auto h-full object-contain"
                 />
               </div>
             </div>
@@ -1015,11 +1015,11 @@ function App() {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <div className="bg-white rounded-lg overflow-hidden border flex items-center justify-center" style={{borderColor: '#E5E7EB'}}>
+              <div className="bg-white rounded-lg overflow-hidden border flex items-center justify-center" style={{borderColor: '#E5E7EB', height: '150px'}}>
                 <img
                   src="/Gemini_Generated_Image_x86obtx86obtx86o.png"
                   alt="3D面部图示"
-                  className="w-auto h-full max-h-[250px] object-contain"
+                  className="w-auto h-full object-contain"
                 />
               </div>
             </div>
