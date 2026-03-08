@@ -1058,7 +1058,7 @@ function App() {
 
               {/* 手术步骤列表 - 纵向排列 */}
               <div className="max-w-md mx-auto rounded-3xl p-6" style={{
-                backgroundColor: '#F5F8FA'
+                backgroundColor: '#FFFFFF'
               }}>
                 {[
                   { num: '01', title: t('plan.step1') }, // 获取专家面部分析
@@ -1069,26 +1069,26 @@ function App() {
                   <div key={item.num}>
                     {/* 步骤卡片 - 长条边框 */}
                     <div
-                      className="rounded-2xl px-6 py-5"
+                      className="rounded-2xl px-6 py-3"
                       style={{
                         border: '1px solid #E5E7EB'
                       }}
                     >
                       {/* 步骤编号 */}
-                      <div className="text-center mb-3">
+                      <div className="text-center mb-1">
                         <span className="text-base font-light tracking-wider" style={{color: '#A0A7B5'}}>
                           {item.num} /
                         </span>
                       </div>
                       {/* 步骤标题 */}
-                      <h3 className="text-base font-normal text-center leading-relaxed" style={{color: '#1F1F1F'}}>
+                      <h3 className="text-base font-normal text-center leading-snug" style={{color: '#1F1F1F'}}>
                         {item.title}
                       </h3>
                     </div>
 
                     {/* 箭头分隔符 - 不在最后一个步骤显示 */}
                     {index < array.length - 1 && (
-                      <div className="flex justify-center py-2">
+                      <div className="flex justify-center py-1">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                           <path
                             d="M10 2L10 16M10 16L5 11M10 16L15 11"
@@ -1154,8 +1154,8 @@ function App() {
               </div>
             </div>
 
-            {/* 手术步骤区 - 单行横向排列 */}
-            <div className="flex gap-16 justify-center">
+            {/* 手术步骤区 - 单行横向排列，背景为白色 */}
+            <div className="flex gap-16 justify-center bg-white rounded-2xl px-12 py-8">
               {[
                 { num: '01', title: t('plan.step1') }, // 获取专家面部分析
                 { num: '02', title: t('plan.step2') }, // 你最美的样子
@@ -1164,9 +1164,9 @@ function App() {
               ].map((item) => (
                 <div key={item.num} className="flex flex-col items-center text-center">
                   {/* 步骤编号 - 大号灰色数字 */}
-                  <div className="text-4xl font-extralight mb-4" style={{color: '#D1D5DB'}}>{item.num}</div>
+                  <div className="text-4xl font-extralight mb-2" style={{color: '#D1D5DB'}}>{item.num} /</div>
                   {/* 步骤标题 */}
-                  <h3 className="text-base font-normal leading-relaxed" style={{color: '#1F1F1F'}}>{item.title}</h3>
+                  <h3 className="text-base font-normal leading-snug" style={{color: '#1F1F1F'}}>{item.title}</h3>
                 </div>
               ))}
             </div>
