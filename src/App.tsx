@@ -992,6 +992,7 @@ function App() {
 
           <div className="grid grid-cols-2 gap-4 md:gap-12 max-w-5xl mx-auto">
             <div className="space-y-4">
+              <h3 className="text-base md:text-lg font-medium text-center" style={{color: '#1F1F1F'}}>低折叠度</h3>
               <div className="bg-white rounded-lg overflow-hidden border" style={{borderColor: '#E5E7EB'}}>
                 <img
                   src="/c902ff4b95da45684c7afeaa83488729.jpg"
@@ -1008,6 +1009,7 @@ function App() {
               </div>
             </div>
             <div className="space-y-4">
+              <h3 className="text-base md:text-lg font-medium text-center" style={{color: '#1F1F1F'}}>高折叠度</h3>
               <div className="bg-white rounded-lg overflow-hidden border" style={{borderColor: '#E5E7EB'}}>
                 <img
                   src="/6ddd0ec9ec91d3e5b3bc59d068c2a2b5.jpg"
