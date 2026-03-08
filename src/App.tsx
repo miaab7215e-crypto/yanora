@@ -981,6 +981,34 @@ function App() {
         </div>
       </section>
 
+      <section className="py-12 md:py-24 px-4 md:px-8" style={{backgroundColor: '#F9FAFB'}}>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-light text-center mb-3 tracking-wide" style={{color: '#1F1F1F'}}>
+            面部折叠度
+          </h2>
+          <p className="text-sm md:text-base text-center mb-12 md:mb-16 tracking-wide" style={{color: '#6B7280'}}>
+            面部折叠度是衡量面部年轻态的关键指标，通过对比可以直观感受岁月在面部留下的痕迹
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+              <img
+                src="/c902ff4b95da45684c7afeaa83488729.jpg"
+                alt="年轻面部状态"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+              <img
+                src="/6ddd0ec9ec91d3e5b3bc59d068c2a2b5.jpg"
+                alt="成熟面部状态"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-12 md:py-24 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-light text-center mb-3 tracking-wide" style={{color: '#1F1F1F'}}>
