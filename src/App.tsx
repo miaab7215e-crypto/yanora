@@ -991,12 +991,26 @@ function App() {
           </p>
 
           <div className="grid grid-cols-2 gap-4 md:gap-12 max-w-5xl mx-auto">
-            <div className="bg-white rounded-lg overflow-hidden border" style={{borderColor: '#E5E7EB'}}>
-              <img
-                src="/c902ff4b95da45684c7afeaa83488729.jpg"
-                alt="年轻面部状态"
-                className="w-full h-auto object-cover"
-              />
+            <div className="space-y-4">
+              <div className="bg-white rounded-lg overflow-hidden border" style={{borderColor: '#E5E7EB'}}>
+                <img
+                  src="/c902ff4b95da45684c7afeaa83488729.jpg"
+                  alt="年轻面部状态"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="bg-white rounded-lg border p-4 md:p-8 flex items-center justify-center" style={{borderColor: '#E5E7EB', minHeight: '200px'}}>
+                <svg viewBox="0 0 400 400" className="w-full h-auto max-w-[250px]">
+                  <polygon points="200,50 350,150 350,350 200,400 50,350 50,150" fill="#E8E8E8" stroke="#1F1F1F" strokeWidth="3"/>
+                  <polygon points="200,50 350,150 200,200 50,150" fill="#D0D0D0" stroke="#1F1F1F" strokeWidth="3"/>
+                  <polygon points="200,200 350,150 350,350 200,400" fill="#C0C0C0" stroke="#E53E3E" strokeWidth="3"/>
+                  <polygon points="200,200 50,150 50,350 200,400" fill="#F5F5F5" stroke="#E53E3E" strokeWidth="3"/>
+                  <rect x="100" y="240" width="200" height="120" fill="#FFFBF0" stroke="#1F1F1F" strokeWidth="2"/>
+                  <circle cx="140" cy="280" r="20" fill="#1F1F1F"/>
+                  <circle cx="260" cy="280" r="20" fill="#1F1F1F"/>
+                  <path d="M 170 330 Q 200 350 230 330" fill="#1F1F1F" stroke="none"/>
+                </svg>
+              </div>
             </div>
             <div className="bg-white rounded-lg overflow-hidden border" style={{borderColor: '#E5E7EB'}}>
               <img
