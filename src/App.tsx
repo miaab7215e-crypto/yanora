@@ -1057,18 +1057,40 @@ function App() {
               </div>
 
               {/* 手术步骤列表 - 纵向排列 */}
-              <div className="max-w-md mx-auto space-y-3">
+              <div className="max-w-md mx-auto space-y-4">
                 {[
                   { num: '01', title: t('plan.step1') }, // 获取专家面部分析
                   { num: '02', title: t('plan.step2') }, // 你最美的样子
                   { num: '03', title: t('plan.step3') }, // 获取你的专属焕颜方案
                   { num: '04', title: t('plan.step4') }  // 见证显著效果
-                ].map((item) => (
-                  <div key={item.num} className="flex items-center gap-3 pb-3 border-b border-gray-200 last:border-0">
-                    {/* 步骤编号 */}
-                    <div className="text-base font-light flex-shrink-0" style={{color: '#A0A7B5', width: '36px'}}>{item.num}</div>
-                    {/* 步骤标题 */}
-                    <h3 className="text-sm font-normal tracking-wide leading-snug" style={{color: '#1F1F1F'}}>{item.title}</h3>
+                ].map((item, index) => (
+                  <div
+                    key={item.num}
+                    className="relative rounded-2xl overflow-hidden transition-all duration-300 active:scale-98"
+                    style={{backgroundColor: '#F5F8FA'}}
+                  >
+                    <div className="p-5 flex items-center gap-4">
+                      {/* 步骤编号 - 圆形背景 */}
+                      <div
+                        className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center"
+                        style={{backgroundColor: '#1C2B3A'}}
+                      >
+                        <span className="text-white text-base font-light">{item.num}</span>
+                      </div>
+                      {/* 步骤标题 */}
+                      <h3 className="text-sm font-normal tracking-wide leading-relaxed flex-1" style={{color: '#1F1F1F'}}>
+                        {item.title}
+                      </h3>
+                    </div>
+                    {/* 底部装饰条 */}
+                    <div
+                      className="absolute bottom-0 left-0 right-0 h-1"
+                      style={{
+                        backgroundColor: '#B9CBDC',
+                        transform: `scaleX(${(index + 1) * 0.25})`,
+                        transformOrigin: 'left'
+                      }}
+                    ></div>
                   </div>
                 ))}
               </div>
