@@ -10,6 +10,7 @@ import MobileTestimonialCarousel from './components/MobileTestimonialCarousel';
 import LanguageSelector from './components/LanguageSelector';
 import Footer from './components/Footer';
 import SplashScreen from './components/SplashScreen';
+import AnimatedSection from './components/AnimatedSection';
 import { useLanguage } from './contexts/LanguageContext';
 
 interface Profile {
@@ -454,7 +455,7 @@ function App() {
       )}
 
       <section className="py-16 md:py-32 px-12">
-        <div className="max-w-4xl mx-auto text-center">
+        <AnimatedSection animation="fade-up" className="max-w-4xl mx-auto text-center">
           <h1 className="text-xl md:text-3xl font-light mb-3 leading-relaxed tracking-wide" style={{color: '#1F1F1F'}}>
             {t('hero.title1')}
           </h1>
@@ -470,12 +471,12 @@ function App() {
           >
             {t('hero.cta')}
           </button>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* 桌面端服务展示 */}
       <section className="hidden md:block py-12 px-12">
-        <div className="w-4/5 mx-auto">
+        <AnimatedSection animation="scale-in" className="w-4/5 mx-auto">
           <div className="p-8 flex flex-row gap-8 rounded-3xl border-4" style={{minHeight: '320px', borderColor: '#B9CBDC'}}>
             <div className="w-5/6 grid grid-cols-2 gap-6">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden" >
@@ -510,12 +511,12 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* 移动端服务展示 */}
       <section className="md:hidden py-8">
-        <div className="w-full px-4">
+        <AnimatedSection animation="scale-in" className="w-full px-4">
           <div className="p-1 flex flex-col gap-3 rounded-2xl border-[3px]" style={{borderColor: '#B9CBDC'}}>
             <div className="flex flex-col gap-3">
               <div className="aspect-[3/4] rounded-lg overflow-hidden">
@@ -617,37 +618,41 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       <section className="py-12 md:py-24 px-6 md:px-12 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="hidden md:block">
-            <h2 className="text-3xl font-light text-center mb-20 tracking-wide" style={{color: '#1F1F1F'}}>{t('advantages.title')}</h2>
+            <AnimatedSection animation="fade-up">
+              <h2 className="text-3xl font-light text-center mb-20 tracking-wide" style={{color: '#1F1F1F'}}>{t('advantages.title')}</h2>
+            </AnimatedSection>
 
-            <div className="relative">
-              <div className="absolute top-1/2 left-0 right-0 h-0.5" style={{backgroundColor: '#B9CBDC', transform: 'translateY(-50%)'}}></div>
+            <AnimatedSection animation="fade-up" delay={200}>
+              <div className="relative">
+                <div className="absolute top-1/2 left-0 right-0 h-0.5" style={{backgroundColor: '#B9CBDC', transform: 'translateY(-50%)'}}></div>
 
-              <div className="grid grid-cols-5 gap-8 relative">
-                {[
-                  { num: '1', title: t('advantages.advantage1') },
-                  { num: '2', title: t('advantages.advantage2') },
-                  { num: '3', title: t('advantages.advantage3') },
-                  { num: '4', title: t('advantages.advantage4') },
-                  { num: '5', title: t('advantages.advantage5') }
-                ].map((item) => (
-                  <div key={item.num} className="text-center relative">
-                    <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-xl font-light relative z-10" style={{backgroundColor: '#1C2B3A'}}>
-                      {item.num}
+                <div className="grid grid-cols-5 gap-8 relative">
+                  {[
+                    { num: '1', title: t('advantages.advantage1') },
+                    { num: '2', title: t('advantages.advantage2') },
+                    { num: '3', title: t('advantages.advantage3') },
+                    { num: '4', title: t('advantages.advantage4') },
+                    { num: '5', title: t('advantages.advantage5') }
+                  ].map((item) => (
+                    <div key={item.num} className="text-center relative">
+                      <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-xl font-light relative z-10" style={{backgroundColor: '#1C2B3A'}}>
+                        {item.num}
+                      </div>
+                      <h3 className="text-sm font-normal tracking-wide px-2" style={{color: '#1F1F1F'}}>{item.title}</h3>
                     </div>
-                    <h3 className="text-sm font-normal tracking-wide px-2" style={{color: '#1F1F1F'}}>{item.title}</h3>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
+            </AnimatedSection>
           </div>
 
-          <div className="md:hidden max-w-md mx-auto">
+          <AnimatedSection animation="scale-in" className="md:hidden max-w-md mx-auto">
             <div className="rounded-3xl p-6" style={{backgroundColor: '#B9CBDC'}}>
               <div className="flex justify-center mb-4">
                 <div className="w-12 h-12 rounded-full flex items-center justify-center bg-white">
@@ -687,20 +692,20 @@ function App() {
                 ))}
               </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
       <section className="py-12 md:py-24 px-4 md:px-12 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
+          <AnimatedSection animation="fade-up" className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-light mb-4 tracking-wide" style={{color: '#1F1F1F'}}>
               {t('ethnicity.title')}
             </h2>
             <p className="text-sm md:text-base leading-relaxed tracking-wide" style={{color: '#4B5563'}}>
               {t('ethnicity.subtitle')}
             </p>
-          </div>
+          </AnimatedSection>
 
           <div className="border-4 p-4 md:p-24 relative overflow-hidden bg-white" style={{borderColor: '#B9CBDC'}}>
             <div className="absolute top-0 right-0 w-64 h-64 opacity-5 rounded-full -mr-32 -mt-32" style={{backgroundColor: '#B9CBDC'}}></div>
@@ -983,15 +988,17 @@ function App() {
 
       <section className="py-12 md:py-24 px-4 md:px-8" style={{backgroundColor: '#F9FAFB'}}>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-light text-center mb-3 tracking-wide" style={{color: '#1F1F1F'}}>
-            面部折叠度
-          </h2>
-          <p className="text-sm md:text-base text-center mb-12 md:mb-16 tracking-wide" style={{color: '#6B7280'}}>
-            面部折叠度是衡量面部年轻态的关键指标，通过对比可以直观感受岁月在面部留下的痕迹
-          </p>
+          <AnimatedSection animation="fade-up">
+            <h2 className="text-2xl md:text-3xl font-light text-center mb-3 tracking-wide" style={{color: '#1F1F1F'}}>
+              面部折叠度
+            </h2>
+            <p className="text-sm md:text-base text-center mb-12 md:mb-16 tracking-wide" style={{color: '#6B7280'}}>
+              面部折叠度是衡量面部年轻态的关键指标，通过对比可以直观感受岁月在面部留下的痕迹
+            </p>
+          </AnimatedSection>
 
           <div className="grid grid-cols-2 gap-4 md:gap-12 max-w-5xl mx-auto">
-            <div className="space-y-4">
+            <AnimatedSection animation="fade-left" delay={100} className="space-y-4">
               <h3 className="text-base md:text-lg font-medium text-center" style={{color: '#1F1F1F'}}>低折叠度</h3>
               <div className="bg-white rounded-lg overflow-hidden border" style={{borderColor: '#E5E7EB'}}>
                 <img
@@ -1007,8 +1014,8 @@ function App() {
                   className="w-auto h-24 md:h-48 object-contain"
                 />
               </div>
-            </div>
-            <div className="space-y-4">
+            </AnimatedSection>
+            <AnimatedSection animation="fade-right" delay={100} className="space-y-4">
               <h3 className="text-base md:text-lg font-medium text-center" style={{color: '#1F1F1F'}}>高折叠度</h3>
               <div className="bg-white rounded-lg overflow-hidden border" style={{borderColor: '#E5E7EB'}}>
                 <img
@@ -1024,19 +1031,21 @@ function App() {
                   className="w-auto h-24 md:h-48 object-contain"
                 />
               </div>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
       <section className="py-12 md:py-24 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-light text-center mb-3 tracking-wide" style={{color: '#1F1F1F'}}>
-            {t('vision.title')}
-          </h2>
-          <p className="text-sm md:text-base text-center mb-8 md:mb-16 tracking-wide" style={{color: '#6B7280'}}>{t('vision.subtitle')}</p>
+          <AnimatedSection animation="fade-up">
+            <h2 className="text-2xl md:text-3xl font-light text-center mb-3 tracking-wide" style={{color: '#1F1F1F'}}>
+              {t('vision.title')}
+            </h2>
+            <p className="text-sm md:text-base text-center mb-8 md:mb-16 tracking-wide" style={{color: '#6B7280'}}>{t('vision.subtitle')}</p>
+          </AnimatedSection>
 
-          <div className="mb-8 md:mb-16 mx-auto w-full md:w-4/5 lg:w-3/4">
+          <AnimatedSection animation="scale-in" delay={200} className="mb-8 md:mb-16 mx-auto w-full md:w-4/5 lg:w-3/4">
             <div className="h-80 md:h-[500px] lg:h-[700px]">
               <ImageCompareSlider
                 beforeLabel="【此处放置案例照片 A】"
@@ -1044,16 +1053,18 @@ function App() {
                 initialPosition={50}
               />
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
       <section className="py-8 md:py-24 px-6 md:px-12 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-light text-center mb-3 tracking-wide" style={{color: '#1F1F1F'}}>{t('plan.title')}</h2>
-          <p className="text-sm text-center mb-8 md:mb-16 tracking-wide" style={{color: '#6B7280'}}>
-            {t('plan.subtitle')}
-          </p>
+          <AnimatedSection animation="fade-up">
+            <h2 className="text-2xl md:text-3xl font-light text-center mb-3 tracking-wide" style={{color: '#1F1F1F'}}>{t('plan.title')}</h2>
+            <p className="text-sm text-center mb-8 md:mb-16 tracking-wide" style={{color: '#6B7280'}}>
+              {t('plan.subtitle')}
+            </p>
+          </AnimatedSection>
 
           {/* Mobile layout - compact version */}
           <div className="md:hidden">
@@ -1319,27 +1330,29 @@ function App() {
         </div>
       </section>
 
-      <CaseStudiesSection />
+      <AnimatedSection animation="fade-up">
+        <CaseStudiesSection />
+      </AnimatedSection>
 
       <section className="py-12 md:py-24 relative overflow-hidden bg-white">
         <div className="relative">
           {/* Mobile title */}
-          <div className="md:hidden">
+          <AnimatedSection animation="fade-up" className="md:hidden">
             <h2 className="text-2xl font-light text-center mb-3 tracking-wide px-6" style={{color: '#1F1F1F'}}>
               {t('testimonials.title')}
             </h2>
             <p className="text-sm text-center mb-2" style={{color: '#6B7280'}}>{t('testimonials.mapTitle')}</p>
             <p className="text-xs text-center mb-6" style={{color: '#6B7280'}}>{t('testimonials.mapSubtitle')}</p>
             <div className="w-20 h-px mx-auto mb-8" style={{backgroundColor: '#A0A7B5'}}></div>
-          </div>
+          </AnimatedSection>
 
           {/* Desktop title */}
-          <div className="hidden md:block">
+          <AnimatedSection animation="fade-up" className="hidden md:block">
             <h2 className="text-3xl font-light text-center mb-4 tracking-wide px-12" style={{color: '#1F1F1F'}}>
               {t('testimonials.title')}
             </h2>
             <div className="w-20 h-px mx-auto mb-6" style={{backgroundColor: '#A0A7B5'}}></div>
-          </div>
+          </AnimatedSection>
 
           {/* Desktop map with text on left */}
           <div className="hidden md:block max-w-7xl mx-auto mb-8 px-12">
