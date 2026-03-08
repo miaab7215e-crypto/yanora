@@ -861,6 +861,130 @@ function App() {
           </div>
         </div>
 
+        {/* Desktop Layout - Keep Original */}
+        <div className="hidden md:block w-full relative bg-white">
+          <img
+            src="/56315efc544d966bb744e9a52c7de1f4.png"
+            alt="Professional portrait"
+            className="w-full h-auto object-cover"
+          />
+
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="max-w-7xl mx-auto h-full relative px-4">
+              <img
+                src="/Gemini_Generated_Image_lv6nndlv6nndlv6n.png"
+                alt="Analysis 1"
+                className="absolute left-8 top-[15%] w-48 md:w-64 h-auto rounded-lg shadow-2xl float-left-1"
+              />
+              <img
+                src="/Gemini_Generated_Image_pf7kappf7kappf7k.png"
+                alt="Analysis 2"
+                className="absolute left-12 bottom-[20%] w-48 md:w-64 h-auto rounded-lg shadow-2xl float-left-2"
+              />
+              <img
+                src="/Gemini_Generated_Image_a16ssqa16ssqa16s.png"
+                alt="Analysis 3"
+                className="absolute right-8 top-[20%] w-48 md:w-64 h-auto rounded-lg shadow-2xl float-right-1"
+              />
+              <img
+                src="/Gemini_Generated_Image_fv9uk0fv9uk0fv9u.png"
+                alt="Analysis 4"
+                className="absolute right-12 bottom-[15%] w-48 md:w-64 h-auto rounded-lg shadow-2xl float-right-2"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Layout - New Design */}
+        <div className="md:hidden w-full">
+          <div className="px-4">
+            <img
+              src="/fb607f9eb3218f6c04e8d1dbaa76f126.jpg"
+              alt="Professional portrait"
+              className="w-full h-auto object-cover rounded-lg mb-6"
+            />
+
+            <div className="rounded-2xl p-4 mb-6 flex items-center gap-4" style={{backgroundColor: '#F5F8FA'}}>
+              <div className="flex-shrink-0 w-24">
+                <img
+                  src="/ecd4dea6a9aeb8932f049b884f734919.jpg"
+                  alt="额部分析"
+                  className="w-full h-auto object-cover rounded-lg"
+                />
+              </div>
+              <div className="flex-1">
+                <p className="text-xs leading-relaxed" style={{color: '#1F2937'}}>
+                  额面分为明区 灰区 暗区  三个转折面 额结节的高低影响 额头的饱满度和立体度
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-2xl p-4 mb-6 flex items-center gap-4" style={{backgroundColor: '#F5F8FA'}}>
+              <div className="flex-shrink-0 w-24">
+                <img
+                  src="/0b9a6dc4116a99bdcba731e6384301b3.jpg"
+                  alt="外轮廓分析"
+                  className="w-full h-auto object-cover rounded-lg"
+                />
+              </div>
+              <div className="flex-1">
+                <p className="text-xs leading-relaxed" style={{color: '#1F2937'}}>
+                  发际线 太阳穴 脸颊下颌骨 下巴的凹凸关系 决定了外轮廓的流畅度
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-2xl p-4 mb-6 flex items-center gap-4" style={{backgroundColor: '#F5F8FA'}}>
+              <div className="flex-shrink-0 w-24">
+                <img
+                  src="/e9d22fcf270788298cf5cc46aa47e5e6.jpg"
+                  alt="内轮廓分析"
+                  className="w-full h-auto object-cover rounded-lg"
+                />
+              </div>
+              <div className="flex-1">
+                <p className="text-xs leading-relaxed" style={{color: '#1F2937'}}>
+                  内轮廓的大小、立体度、苹果肌饱满度及平整度共同决定面部精致感与年轻态。
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              {[
+                {
+                  image: '/Gemini_Generated_Image_lv6nndlv6nndlv6n.png',
+                  title: t('analysis.dimension1')
+                },
+                {
+                  image: '/Gemini_Generated_Image_pf7kappf7kappf7k.png',
+                  title: t('analysis.dimension2')
+                },
+                {
+                  image: '/Gemini_Generated_Image_a16ssqa16ssqa16s.png',
+                  title: t('analysis.dimension3')
+                },
+                {
+                  image: '/Gemini_Generated_Image_fv9uk0fv9uk0fv9u.png',
+                  title: t('analysis.dimension4')
+                }
+              ].map((item, index) => (
+                <div key={index} className="flex flex-col items-center bg-white p-4 rounded-lg shadow-sm border" style={{borderColor: '#E5E7EB', minHeight: '200px'}}>
+                  <div className="flex-1 flex items-center justify-center mb-3">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-24 h-24 object-contain"
+                    />
+                  </div>
+                  <h3 className="text-xs font-normal text-center leading-relaxed" style={{color: '#1F2937'}}>
+                    {item.title}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
       </section>
 
       <section className="py-12 md:py-24 px-4 md:px-8" style={{backgroundColor: '#F9FAFB'}}>
