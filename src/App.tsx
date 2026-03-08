@@ -1317,14 +1317,14 @@ function App() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 md:mb-16">
               <div className="overflow-hidden rounded-3xl shadow-lg">
                 <img
-                  src="/3faae2f8280b5f279b94bb365051cfeb.jpg"
-                  alt="100,000+ Clients Worldwide"
+                  src="/7f89a2d3257b24a6954e53e9ca86f557.jpg"
+                  alt="10W+ Clients Worldwide"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="overflow-hidden rounded-3xl shadow-lg">
                 <img
-                  src="/ff635f096c695024b835de5da9ea4f0e.jpg"
+                  src="/babdd4249dea4d87530ef110e24bd12b.jpg"
                   alt="Personalized Aesthetic Plans"
                   className="w-full h-full object-cover"
                 />
