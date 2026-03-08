@@ -1007,12 +1007,21 @@ function App() {
                 />
               </div>
             </div>
-            <div className="bg-white rounded-lg overflow-hidden border" style={{borderColor: '#E5E7EB'}}>
-              <img
-                src="/6ddd0ec9ec91d3e5b3bc59d068c2a2b5.jpg"
-                alt="成熟面部状态"
-                className="w-full h-auto object-cover"
-              />
+            <div className="space-y-4">
+              <div className="bg-white rounded-lg overflow-hidden border" style={{borderColor: '#E5E7EB'}}>
+                <img
+                  src="/6ddd0ec9ec91d3e5b3bc59d068c2a2b5.jpg"
+                  alt="成熟面部状态"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="bg-white rounded-lg overflow-hidden border" style={{borderColor: '#E5E7EB'}}>
+                <img
+                  src="/Gemini_Generated_Image_x86obtx86obtx86o.png"
+                  alt="3D面部图示"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
