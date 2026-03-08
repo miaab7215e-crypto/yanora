@@ -9,7 +9,7 @@ import ServiceCasesSection from './ServiceCasesSection';
 
 function FacialContourPage() {
   const navigate = useNavigate();
-  const [activeFeature, setActiveFeature] = useState<'nose' | 'eyes' | 'lips' | 'eyebrows' | 'ears'>('nose');
+  const [activeFeature, setActiveFeature] = useState<'nose' | 'eyes' | 'lips'>('nose');
 
   const noseTypes = [
     { id: 1, name: '直鼻', description: '气质干练', image: '🖼️' },
@@ -30,24 +30,11 @@ function FacialContourPage() {
     { id: 3, name: '饱满丰唇', description: '丰盈立体', image: '🖼️' },
   ];
 
-  const eyebrowTypes = [
-    { id: 1, name: '欧式挑眉', description: '高级精致', image: '🖼️' },
-    { id: 2, name: '平直眉', description: '温柔大气', image: '🖼️' },
-    { id: 3, name: '弯月眉', description: '柔和优雅', image: '🖼️' },
-  ];
-
-  const earTypes = [
-    { id: 1, name: '贴发耳', description: '精灵耳矫正', image: '🖼️' },
-    { id: 2, name: '正常耳廓', description: '杯状耳矫正', image: '🖼️' },
-  ];
-
   const getCurrentTypes = () => {
     switch (activeFeature) {
       case 'nose': return noseTypes;
       case 'eyes': return eyeTypes;
       case 'lips': return lipTypes;
-      case 'eyebrows': return eyebrowTypes;
-      case 'ears': return earTypes;
       default: return noseTypes;
     }
   };
@@ -321,8 +308,6 @@ function FacialContourPage() {
               { key: 'nose' as const, label: '鼻子' },
               { key: 'eyes' as const, label: '眼睛' },
               { key: 'lips' as const, label: '嘴巴' },
-              { key: 'eyebrows' as const, label: '眉毛' },
-              { key: 'ears' as const, label: '耳朵' },
             ].map((feature) => (
               <button
                 key={feature.key}
