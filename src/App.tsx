@@ -1057,8 +1057,9 @@ function App() {
               </div>
 
               {/* 手术步骤列表 - 纵向排列 */}
-              <div className="max-w-md mx-auto rounded-3xl p-6" style={{
-                backgroundColor: '#FFFFFF'
+              <div className="max-w-md mx-auto rounded-3xl p-6 border-4" style={{
+                backgroundColor: '#F5F8FA',
+                borderColor: '#B9CBDC'
               }}>
                 {[
                   { num: '01', title: t('plan.step1') }, // 获取专家面部分析
@@ -1071,7 +1072,8 @@ function App() {
                     <div
                       className="rounded-2xl px-6 py-3"
                       style={{
-                        border: '1px solid #E5E7EB'
+                        border: '1px solid #E5E7EB',
+                        backgroundColor: '#FFFFFF'
                       }}
                     >
                       {/* 步骤编号 */}
