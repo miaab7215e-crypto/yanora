@@ -244,10 +244,10 @@ function FacialContourPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
-              { icon: '□', title: '额头/眉骨', subtitle: '丰额头、眉弓抬高', image: null },
-              { icon: '□', title: '颧骨', subtitle: '颧骨内推/降低', image: '/3ba84e3181bb4794304515b7dc9aad6f.jpg' },
-              { icon: '□', title: '下颌线', subtitle: '下颌角截骨、去咬肌', image: null },
-              { icon: '□', title: '下巴', subtitle: '颏成型、假体隆颏', image: null },
+              { icon: '□', title: '额头/眉骨', subtitle: '丰额头、眉弓抬高', image: '/e7cec26aded337066497967b20835027.jpg' },
+              { icon: '□', title: '颧骨', subtitle: '颧骨内推/降低', image: '/2fba6167d76a33f9a5630723c2c3ff27.jpg' },
+              { icon: '□', title: '下颌线', subtitle: '下颌角截骨、去咬肌', image: '/09b2817522388f1c085e42075a1fce19.jpg' },
+              { icon: '□', title: '下巴', subtitle: '颏成型、假体隆颏', image: '/58c5859c8fe00a0ad6887547be4c6fe0.jpg' },
             ].map((item, index) => (
               <div
                 key={index}
