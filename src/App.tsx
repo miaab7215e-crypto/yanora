@@ -1057,7 +1057,9 @@ function App() {
               </div>
 
               {/* 手术步骤列表 - 纵向排列 */}
-              <div className="max-w-md mx-auto">
+              <div className="max-w-md mx-auto bg-white rounded-3xl p-6" style={{
+                boxShadow: '0 2px 20px rgba(0, 0, 0, 0.06)'
+              }}>
                 {[
                   { num: '01', title: t('plan.step1') }, // 获取专家面部分析
                   { num: '02', title: t('plan.step2') }, // 你最美的样子
@@ -1065,33 +1067,33 @@ function App() {
                   { num: '04', title: t('plan.step4') }  // 见证显著效果
                 ].map((item, index, array) => (
                   <div key={item.num}>
-                    {/* 步骤卡片 */}
+                    {/* 步骤卡片 - 长条边框 */}
                     <div
-                      className="bg-white rounded-3xl px-6 py-8 shadow-sm"
+                      className="rounded-2xl px-6 py-5"
                       style={{
-                        boxShadow: '0 2px 12px rgba(0, 0, 0, 0.04)'
+                        border: '1px solid #E5E7EB'
                       }}
                     >
                       {/* 步骤编号 */}
-                      <div className="text-center mb-4">
-                        <span className="text-lg font-light tracking-wider" style={{color: '#A0A7B5'}}>
+                      <div className="text-center mb-3">
+                        <span className="text-base font-light tracking-wider" style={{color: '#A0A7B5'}}>
                           {item.num} /
                         </span>
                       </div>
                       {/* 步骤标题 */}
-                      <h3 className="text-base font-normal text-center leading-relaxed tracking-wide" style={{color: '#1F1F1F'}}>
+                      <h3 className="text-base font-normal text-center leading-relaxed" style={{color: '#1F1F1F'}}>
                         {item.title}
                       </h3>
                     </div>
 
                     {/* 箭头分隔符 - 不在最后一个步骤显示 */}
                     {index < array.length - 1 && (
-                      <div className="flex justify-center py-4">
-                        <svg width="24" height="32" viewBox="0 0 24 32" fill="none">
+                      <div className="flex justify-center py-2">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                           <path
-                            d="M12 0L12 28M12 28L6 22M12 28L18 22"
-                            stroke="#B9CBDC"
-                            strokeWidth="2"
+                            d="M10 2L10 16M10 16L5 11M10 16L15 11"
+                            stroke="#C7CFDA"
+                            strokeWidth="1.5"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                           />
