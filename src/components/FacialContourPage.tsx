@@ -102,7 +102,7 @@ function FacialContourPage() {
       </section>
 
       {/* Facial Contour Section - Bone & Soft Tissue */}
-      <section id="facial-contour-section" className="py-20 md:py-28 px-6 md:px-12 bg-white">
+      <section id="facial-contour-section" className="py-8 md:py-12 px-6 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 text-center">
             <div className="flex justify-center mb-16">
