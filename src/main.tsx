@@ -20,6 +20,7 @@ import FAQPage from './components/FAQPage.tsx';
 import CasesPage from './components/CasesPage.tsx';
 import PrivacyPolicyPage from './components/PrivacyPolicyPage.tsx';
 import AfterSalesPage from './components/AfterSalesPage.tsx';
+import ScrollToTop from './components/ScrollToTop.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -27,6 +28,7 @@ createRoot(document.getElementById('root')!).render(
     <AuthProvider>
       <LanguageProvider>
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<App />} />
             <Route path="/booking" element={<BookingPage />} />
