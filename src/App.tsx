@@ -1057,40 +1057,47 @@ function App() {
               </div>
 
               {/* 手术步骤列表 - 纵向排列 */}
-              <div className="max-w-md mx-auto space-y-4">
+              <div className="max-w-md mx-auto">
                 {[
                   { num: '01', title: t('plan.step1') }, // 获取专家面部分析
                   { num: '02', title: t('plan.step2') }, // 你最美的样子
                   { num: '03', title: t('plan.step3') }, // 获取你的专属焕颜方案
                   { num: '04', title: t('plan.step4') }  // 见证显著效果
-                ].map((item, index) => (
-                  <div
-                    key={item.num}
-                    className="relative rounded-2xl overflow-hidden transition-all duration-300 active:scale-98"
-                    style={{backgroundColor: '#F5F8FA'}}
-                  >
-                    <div className="p-5 flex items-center gap-4">
-                      {/* 步骤编号 - 圆形背景 */}
-                      <div
-                        className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center"
-                        style={{backgroundColor: '#1C2B3A'}}
-                      >
-                        <span className="text-white text-base font-light">{item.num}</span>
+                ].map((item, index, array) => (
+                  <div key={item.num}>
+                    {/* 步骤卡片 */}
+                    <div
+                      className="bg-white rounded-3xl px-6 py-8 shadow-sm"
+                      style={{
+                        boxShadow: '0 2px 12px rgba(0, 0, 0, 0.04)'
+                      }}
+                    >
+                      {/* 步骤编号 */}
+                      <div className="text-center mb-4">
+                        <span className="text-lg font-light tracking-wider" style={{color: '#A0A7B5'}}>
+                          {item.num} /
+                        </span>
                       </div>
                       {/* 步骤标题 */}
-                      <h3 className="text-sm font-normal tracking-wide leading-relaxed flex-1" style={{color: '#1F1F1F'}}>
+                      <h3 className="text-base font-normal text-center leading-relaxed tracking-wide" style={{color: '#1F1F1F'}}>
                         {item.title}
                       </h3>
                     </div>
-                    {/* 底部装饰条 */}
-                    <div
-                      className="absolute bottom-0 left-0 right-0 h-1"
-                      style={{
-                        backgroundColor: '#B9CBDC',
-                        transform: `scaleX(${(index + 1) * 0.25})`,
-                        transformOrigin: 'left'
-                      }}
-                    ></div>
+
+                    {/* 箭头分隔符 - 不在最后一个步骤显示 */}
+                    {index < array.length - 1 && (
+                      <div className="flex justify-center py-4">
+                        <svg width="24" height="32" viewBox="0 0 24 32" fill="none">
+                          <path
+                            d="M12 0L12 28M12 28L6 22M12 28L18 22"
+                            stroke="#B9CBDC"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
