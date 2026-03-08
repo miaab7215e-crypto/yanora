@@ -949,39 +949,7 @@ function App() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              {[
-                {
-                  image: '/Gemini_Generated_Image_lv6nndlv6nndlv6n.png',
-                  title: t('analysis.dimension1')
-                },
-                {
-                  image: '/Gemini_Generated_Image_pf7kappf7kappf7k.png',
-                  title: t('analysis.dimension2')
-                },
-                {
-                  image: '/Gemini_Generated_Image_a16ssqa16ssqa16s.png',
-                  title: t('analysis.dimension3')
-                },
-                {
-                  image: '/Gemini_Generated_Image_fv9uk0fv9uk0fv9u.png',
-                  title: t('analysis.dimension4')
-                }
-              ].map((item, index) => (
-                <div key={index} className="flex flex-col items-center bg-white p-4 rounded-lg shadow-sm border" style={{borderColor: '#E5E7EB', minHeight: '200px'}}>
-                  <div className="flex-1 flex items-center justify-center mb-3">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-24 h-24 object-contain"
-                    />
-                  </div>
-                  <h3 className="text-xs font-normal text-center leading-relaxed" style={{color: '#1F2937'}}>
-                    {item.title}
-                  </h3>
-                </div>
-              ))}
-            </div>
+           
           </div>
         </div>
 
